@@ -27,7 +27,7 @@ def selection():
     print("Let's get you started.\n")
     choice_2()
   elif choice == 3:
-    print("Oh, you exited. Bye Bye.")
+    print(f"Thank you for using JB BANK. See you next time, {name}!")
     choice_3()
 
 selection()
