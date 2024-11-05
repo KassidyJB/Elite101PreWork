@@ -37,22 +37,20 @@ selection()
 def choice_1():
   user_name = input(f"{name}, Please enter a username for your new account below. \n")
   print(f"Hello {user_name}!\n")
-  cs_ask = input(f"{name}, would you like to create a savings or checking account?")
+  cs_ask = input(f"{name}, would you like to create a savings or checking account?\n")
   if cs_ask == "savings":#So now, because I didn't have s or c capital, input HAS to be lowercase
-
-  
-choice_1()
+    input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?")
+#choice_1()
 
 def choice_2():
   print("Why cant a statistic answer an algebraic question correct? Because it will PROBABLY get it wrong, hahahaha!!")
 choice_2()
 
 def choice_3():
-  print(f"Thank you for using JB BANK. See you next time, {name}!")
+  print(f
 choice_3()
   
 selection()
 
 #My Exit message works and still displays, yet it's an error
-#I'll work on that as this course progresses.
-
+#I'll work on that as this course progresses
