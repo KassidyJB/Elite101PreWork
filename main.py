@@ -11,9 +11,10 @@ print(f'\nLord!! {age}!? That is so cool!!\n')
 
 def display_menu():
   print(f' Anyways, it seems like you need help {name}.\n')
-  print("1. Sign in")
-  print("2. Log In")
-  print("3. Exit")
+  print("1. Sign in") #Can use the sign in function to create saving and checking account 
+  print("2. Log In") #Can use Log in to transfer, deposit, or withdraw money
+  print("3. Learn More") #Gives user any additional details needed or anything they could learn
+  print("4. Exit") #Exit the whole program (could be done with a while loop)
 
 display_menu()
   
@@ -33,7 +34,8 @@ def selection():
 selection()
 
 def choice_1():
-  user_info = input("Enter your name below. \n")
+  user_name = input(f"{name}, Please enter a username for your new account below. \n")
+  print(f"Hello {user_name}!
   
 choice_1()
 
