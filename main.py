@@ -2,7 +2,7 @@ import random
 
 name = input("What is your name? \n>")
 
-print(f'\nWelcome to the Elitebot {name}!\n')
+print(f'\nWelcome to JB Bank {name}!\n')
 
 age = input(f'So {name}, how old are you?? \n>')
 
@@ -19,23 +19,27 @@ def display_menu():
 display_menu()
   
 def selection():
+  in_use = True
   choice = int(input('''
   Enter your choice so I can properly assist. \n>'''))
   if choice == 1:
-    print("Okay hold on,\n")
     choice_1()
   elif choice == 2:
-    print("Let's get you started.\n")
     choice_2()
   elif choice == 3:
-    print(f"Thank you for using JB BANK. See you next time, {name}!")
     choice_3()
+  elif choice == 4:
+    print(f"Thank you for using JB BANK. See you next time, {name}!")
+    in_use = False
 
 selection()
 
 def choice_1():
   user_name = input(f"{name}, Please enter a username for your new account below. \n")
-  print(f"Hello {user_name}!
+  print(f"Hello {user_name}!\n")
+  cs_ask = input(f"{name}, would you like to create a savings or checking account?")
+  if cs_ask == "savings":#So now, because I didn't have s or c capital, input HAS to be lowercase
+
   
 choice_1()
 
