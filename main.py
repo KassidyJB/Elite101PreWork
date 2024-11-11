@@ -1,5 +1,5 @@
 import random
-
+print("--------------------------")
 name = input("What is your name? \n>")
 
 print(f'\nWelcome to JB Bank {name}!\n')
@@ -39,16 +39,18 @@ def choice_1():
   print(f"Hello {user_name}!\n")
   cs_ask = input(f"{name}, would you like to create a savings or checking account?\n")
   if cs_ask == "savings":#So now, because I didn't have s or c capital, input HAS to be lowercase
-    input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?")
+    acc_select = input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?")
+    if acc_select == "single account":
+
 #choice_1()
 
 def choice_2():
-  print("Why cant a statistic answer an algebraic question correct? Because it will PROBABLY get it wrong, hahahaha!!")
-choice_2()
+  print("")
+pass
 
 def choice_3():
   print(f
-choice_3()
+pass
   
 selection()
 
