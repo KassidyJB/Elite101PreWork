@@ -20,6 +20,7 @@ display_menu()
   
 def selection():
   in_use = True
+  print("--------------------")
   choice = int(input('''
   Enter your choice so I can properly assist. \n>'''))
   if choice == 1:
@@ -29,7 +30,8 @@ def selection():
   elif choice == 3:
     choice_3()
   elif choice == 4:
-    print(f"Thank you for using JB BANK. See you next time, {name}!")
+    print(f"Thank you for using JB BANK. See you next time, {name}!\n")
+    print("------------------------")
     in_use = False
 
 selection()
@@ -37,22 +39,34 @@ selection()
 def choice_1():
   user_name = input(f"{name}, Please enter a username for your new account below. \n")
   print(f"Hello {user_name}!\n")
-  cs_ask = input(f"{name}, would you like to create a savings or checking account?\n")
-  if cs_ask == "savings":#So now, because I didn't have s or c capital, input HAS to be lowercase
-    acc_select = input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?")
-    if acc_select == "single account":
-
+  cs_ask = input(f"{name}, would you like to create a savings or checking account?\n").capitalize()
+  if cs_ask == "Savings":#So now, because I didn't have s or c capital, input HAS to be lowercase---->(fized using .capitalize())
+    acc_select = input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?\n").capitalize()
+    if acc_select == "Single account":
+    if acc_select == "Joint account":
+  if cs_ask == "Checking account": 
+    user_intel = []
+    user_info = input(f"Enter your adress below, {user_name}\n")
+pass
 #choice_1()
 
 def choice_2():
-  print("")
+  print("--------------------")
+  log_name = input(f"Enter your username below, {name}")
+  log_ask = input(f"{log_name}, would you like to transfer, deposit, or withdraw money?\n").capitalize()
+  if log_ask == "Transfer":
+    tran = float(input("How much money would you like to transfer?"))
+  if log_ask == "Deposit":
+    dep = float(input("How much money would you like to deposit?"))
+  if log_ask == "Withdraw":
+    wdraw = float(input("How much money would you like to withdraw?"))
+
+
+
 pass
 
 def choice_3():
-  print(f
-pass
+  pass
   
 selection()
 
-#My Exit message works and still displays, yet it's an error
-#I'll work on that as this course progresses
