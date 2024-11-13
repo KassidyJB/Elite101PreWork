@@ -67,6 +67,7 @@ def choice_1():
       user_joint.append(user_info_41)
       user_joint.append(user_info_42)
       join_user_info = "".join(user_joint)
+      return join_user_info
   elif cs_ask == "Checking": 
     user_intel_2 = []
     user_info_5 = str(input(f"\nEnter your adress below, {user_name} \n>").capitalize())
