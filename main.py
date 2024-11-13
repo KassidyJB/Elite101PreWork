@@ -1,7 +1,5 @@
 import random
 
-program_loop = True
-
 name = input(f"What is your name? \n>")
 
 print(f'\nWelcome to JB Bank {name}!\n')
@@ -11,13 +9,13 @@ age = input(f'So {name}, how old are you?? \n>')
 print(f'\nLord!! {age}!? That is so cool!!\n')
 
 def display_menu():
-  print(f' \nAnyways, it seems like you need help {name}.\n')
+  print(f' \nNeed help? Choose an option below, {name}.\n')
   print("1. Sign in") #Can use the sign in function to create saving and checking account 
   print("2. Log In") #Can use Log in to transfer, deposit, or withdraw money
   print("3. Learn More") #Gives user any additional details needed or anything they could learn
   print("4. Exit") #Exit the whole program (could be done with a while loop)
 
-display_menu()
+program_loop = True
   
 def selection():
   in_use = True
@@ -64,13 +62,17 @@ def choice_1():
         print("Please restart this program, you've entered the wrong section.")
       elif user_info_42 == "Yes":
         print("Great! You've created a joint account with your partner. Enjoy!")
-      user_joint.append(user_info_3, user_info_4, user_info_41, user_info_42)
+      user_joint.append(user_info_3)
+      user_joint.append(user_info_4)
+      user_joint.append(user_info_41)
+      user_joint.append(user_info_42)
       join_user_info = "".join(user_joint)
-  elif cs_ask == "Checking account": 
+  elif cs_ask == "Checking": 
     user_intel_2 = []
-    user_info_5 = str(int(input(f"\nEnter your adress below, {user_name} \n>").capitalize()))
-    user_info_6 = int(input(f"Please enter your Social Security Number \n>"))
-    user_intel_2.append(user_info_5, user_info_6)
+    user_info_5 = str(input(f"\nEnter your adress below, {user_name} \n>").capitalize())
+    user_info_6 = str(input(f"Please enter your Social Security Number \n>"))
+    user_intel_2.append(user_info_5)
+    user_intel_2.append(user_info_6)
 
 
 
@@ -83,18 +85,18 @@ def choice_2():
   
   if log_ask == "Transfer":
     actions = []
-    tran = float(input(f"\nHow much money would you like to transfer? \n>"))
+    tran = (str(float(input(f"\nHow much money would you like to transfer? \n>"))))
     actions.append(tran)
   
   if log_ask == "Deposit":
-    dep = float(input(f"\nHow much money would you like to deposit? \n>"))
+    dep = (str(float(input(f"\nHow much money would you like to deposit? \n>"))))
     actions.append(dep)
   
   if log_ask == "Withdraw":
-    wdraw = float(input(f"\nHow much money would you like to withdraw? \n>"))
+    wdraw = (str(float(input(f"\nHow much money would you like to withdraw? \n>"))))
     actions.append(wdraw)
-  review = "".join(actions)
-  return review
+    review = "".join(actions)
+    return review
 
 
 
