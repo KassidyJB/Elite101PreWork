@@ -45,7 +45,7 @@ def choice_1():
     
     if acc_select == "Single account":
         user_intel_1 = []
-        user_info_1 = input(f"\nEnter your address below, {user_name} \n>").capitalize()
+        user_info_1 = str(int(input(f"\nEnter your address below, {user_name} \n>").capitalize()))
     
     if acc_select == "Joint account":
       user_intel_2 = []
@@ -88,4 +88,4 @@ def choice_3():
 
 while program_loop:
   display_menu()
-  program_loop = selection() 
+  program_loop = selection()
