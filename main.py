@@ -46,7 +46,7 @@ def choice_1():
     if acc_select == "Joint account":
   if cs_ask == "Checking account": 
     user_intel = []
-    user_info = input(f"Enter your adress below, {user_name}\n")
+    user_info = input(f"Enter your adress below, {user_name}\n").capitalize()
 pass
 #choice_1()
 
@@ -66,7 +66,13 @@ def choice_2():
 pass
 
 def choice_3():
-  pass
-  
-selection()
+  print("------------------")
+  print(f"Here's a few things to know: \n")
+  print('''Our ATM machines are located in each borough of NY, 7 in NJ, 
+        4 in New Hampshire, and 3 in Pennsylvania''')
+  print('''We at JB Bank prioritize your safety and will be the ones keeping your money in your pockets. 
+        With that being said, you can earn up to $100 in your account by the end of each year you're with us. 
+        Happy Banking!''')
 
+
+pass
