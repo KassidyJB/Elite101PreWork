@@ -32,7 +32,11 @@ def selection():
   elif choice == 4:
     print(f"\nThank you for using JB BANK. See you next time, {name}!\n")
     print("---------------------------------------")
-  in_use = False
+    in_use = False
+  else:
+    print(f"\nInput may not be a number. Please try again!")
+  return in_use
+      
 
 def choice_1():
   print("------------------------------------------------")
@@ -55,7 +59,7 @@ def choice_1():
       user_info_3 = str(int(input(f"\nEnter you address below, {user_name}\n>").capitalize()))
       user_info_4 = int(input(f"Please enter your Social Security Number\n>"))
       user_info_41 = str(int(input(f"What is your Date Of Birth?\n>")))
-      user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner?").capitalize()
+      user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
       if user_info_42 == "No":
         print("Please restart this program, you've entered the wrong section.")
       elif user_info_42 == "Yes":
