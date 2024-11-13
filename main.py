@@ -38,24 +38,33 @@ def choice_1():
   print("------------------------------------------------")
   user_name = input(f"\n{name}, Please enter a username for your new account below. \n>")
   print(f"\nHello {user_name}!\n")
-  cs_ask = input(f"\n{name}, would you like to create a savings or checking account? \n>").capitalize()
+  cs_ask = input(f"{user_name}, would you like to create a savings or checking account? \n>").capitalize()
   
   if cs_ask == "Savings":
     acc_select = input(f"\nAlright {user_name}, you selected Savings. Would you like to create a joint account or single account? \n>").capitalize()
     
     if acc_select == "Single account":
-        user_intel_1 = []
-        user_info_1 = str(int(input(f"\nEnter your address below, {user_name} \n>").capitalize()))
+      user_intel_1 = []
+      user_info_1 = str(int(input(f"\nEnter your address below, {user_name} \n>").capitalize()))
+      user_info_2 = int(input(f"Please enter your Social Security Number \n>"))
+      user_intel_1.append(user_info_1, user_info_2)
+
     
     if acc_select == "Joint account":
-      user_intel_2 = []
-      user_info_2 = input(f"\nEnter you address below, {user_name} \n>").capitalize()
-      user_intel_2.append(user_info_2)
+      user_joint = []
+      user_info_3 = str(int(input(f"\nEnter you address below, {user_name} \n>").capitalize()))
+      user_info_4 = int(input(f"Please enter your Social Security Number \n>"))
+      user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner?").capitalize()
+      if user_info_42 == "No":
+        print("Please restart this program, you've entered the wrong section.")
+      user_joint.append(user_info_3, user_info_4)
   
   if acc_select == "Checking account": 
-    user_intel_3 = []
-    user_info = input(f"\nEnter your adress below, {user_name} \n>").capitalize()
-    user_intel_3.append(user_info)
+    user_intel_2 = []
+    user_info_5 = str(int(input(f"\nEnter your adress below, {user_name} \n>").capitalize()))
+    user_info_6 = int(input(f"Please enter your Social Security Number \n>"))
+    user_intel_2.append(user_info_5, user_info_6)
+
 
 
 
@@ -66,13 +75,19 @@ def choice_2():
   log_ask = input(f"\n{log_name}, would you like to transfer, deposit, or withdraw money? \n>").capitalize()
   
   if log_ask == "Transfer":
+    actions = []
     tran = float(input(f"\nHow much money would you like to transfer? \n>"))
+    actions.append(tran)
   
   if log_ask == "Deposit":
     dep = float(input(f"\nHow much money would you like to deposit? \n>"))
+    actions.append(dep)
   
   if log_ask == "Withdraw":
     wdraw = float(input(f"\nHow much money would you like to withdraw? \n>"))
+    actions.append(wdraw)
+  review = "".join(actions)
+  return review
 
 
 
