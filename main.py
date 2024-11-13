@@ -32,7 +32,7 @@ def selection():
   elif choice == 4:
     print(f"\nThank you for using JB BANK. See you next time, {name}!\n")
     print("---------------------------------------")
-    in_use = False
+  in_use = False
 
 def choice_1():
   print("------------------------------------------------")
@@ -52,17 +52,17 @@ def choice_1():
     
     if acc_select == "Joint account":
       user_joint = []
-      user_info_3 = str(int(input(f"\nEnter you address below, {user_name} \n>").capitalize()))
-      user_info_4 = int(input(f"Please enter your Social Security Number \n>"))
-      user_info_41 = 
+      user_info_3 = str(int(input(f"\nEnter you address below, {user_name}\n>").capitalize()))
+      user_info_4 = int(input(f"Please enter your Social Security Number\n>"))
+      user_info_41 = str(int(input(f"What is your Date Of Birth?\n>")))
       user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner?").capitalize()
       if user_info_42 == "No":
         print("Please restart this program, you've entered the wrong section.")
       elif user_info_42 == "Yes":
         print("Great! You've created a joint account with your partner. Enjoy!")
       user_joint.append(user_info_3, user_info_4, user_info_41, user_info_42)
-  
-  if acc_select == "Checking account": 
+      join_user_info = "".join(user_joint)
+  elif cs_ask == "Checking account": 
     user_intel_2 = []
     user_info_5 = str(int(input(f"\nEnter your adress below, {user_name} \n>").capitalize()))
     user_info_6 = int(input(f"Please enter your Social Security Number \n>"))
