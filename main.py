@@ -54,10 +54,13 @@ def choice_1():
       user_joint = []
       user_info_3 = str(int(input(f"\nEnter you address below, {user_name} \n>").capitalize()))
       user_info_4 = int(input(f"Please enter your Social Security Number \n>"))
+      user_info_41 = 
       user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner?").capitalize()
       if user_info_42 == "No":
         print("Please restart this program, you've entered the wrong section.")
-      user_joint.append(user_info_3, user_info_4)
+      elif user_info_42 == "Yes":
+        print("Great! You've created a joint account with your partner. Enjoy!")
+      user_joint.append(user_info_3, user_info_4, user_info_41, user_info_42)
   
   if acc_select == "Checking account": 
     user_intel_2 = []
