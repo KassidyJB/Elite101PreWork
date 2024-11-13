@@ -1,4 +1,5 @@
 import random
+
 print("--------------------------")
 name = input("What is your name? \n>")
 
@@ -8,6 +9,7 @@ age = input(f'So {name}, how old are you?? \n>')
 
 print(f'\nLord!! {age}!? That is so cool!!\n')
 
+program_loop = True
 
 def display_menu():
   print(f' Anyways, it seems like you need help {name}.\n')
@@ -40,10 +42,14 @@ def choice_1():
   user_name = input(f"{name}, Please enter a username for your new account below. \n")
   print(f"Hello {user_name}!\n")
   cs_ask = input(f"{name}, would you like to create a savings or checking account?\n").capitalize()
+  
   if cs_ask == "Savings":#So now, because I didn't have s or c capital, input HAS to be lowercase---->(fized using .capitalize())
     acc_select = input(f"Alright {user_name}, you selected Savings. Would you like to create a joint account or single account?\n").capitalize()
+    
     if acc_select == "Single account":
+    
     if acc_select == "Joint account":
+  
   if cs_ask == "Checking account": 
     user_intel = []
     user_info = input(f"Enter your adress below, {user_name}\n").capitalize()
@@ -51,13 +57,16 @@ pass
 #choice_1()
 
 def choice_2():
-  print("--------------------")
+  print("------------------------------------------------")
   log_name = input(f"Enter your username below, {name}")
   log_ask = input(f"{log_name}, would you like to transfer, deposit, or withdraw money?\n").capitalize()
+  
   if log_ask == "Transfer":
     tran = float(input("How much money would you like to transfer?"))
+  
   if log_ask == "Deposit":
     dep = float(input("How much money would you like to deposit?"))
+  
   if log_ask == "Withdraw":
     wdraw = float(input("How much money would you like to withdraw?"))
 
@@ -66,7 +75,7 @@ def choice_2():
 pass
 
 def choice_3():
-  print("------------------")
+  print("-------------------------------------")
   print(f"Here's a few things to know: \n")
   print('''Our ATM machines are located in each borough of NY, 7 in NJ, 
         4 in New Hampshire, and 3 in Pennsylvania''')
@@ -76,3 +85,7 @@ def choice_3():
 
 
 pass
+
+while program_loop:
+  display_menu()
+  program_loop = selection() 
