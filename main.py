@@ -47,15 +47,16 @@ def choice_1():
     
     if acc_select == "Single account":
       user_intel_1 = []
-      user_info_1 = str(int(input(f"\nEnter your address below, {user_name} \n>").capitalize()))
-      user_info_2 = int(input(f"Please enter your Social Security Number \n>"))
-      user_intel_1.append(user_info_1, user_info_2)
+      user_info_1 = str(input(f"\nEnter your address below, {user_name} \n>").capitalize())
+      user_info_2 = float(input(f"Please enter your Social Security Number \n>"))
+      user_intel_1.append(user_info_1)
+      user_intel_1.append(user_info_2)
 
     
     if acc_select == "Joint account":
       user_joint = []
-      user_info_3 = str(int(input(f"\nEnter you address below, {user_name}\n>").capitalize()))
-      user_info_4 = int(input(f"Please enter your Social Security Number\n>"))
+      user_info_3 = str(input(f"\nEnter you address below, {user_name}\n>").capitalize())
+      user_info_4 = float(input(f"Please enter your Social Security Number\n>"))
       user_info_41 = str(int(input(f"What is your Date Of Birth?\n>")))
       user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
       if user_info_42 == "No":
