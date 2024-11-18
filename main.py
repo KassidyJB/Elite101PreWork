@@ -48,14 +48,14 @@ def choice_1():
     if acc_select == "Single account":
       user_intel_1 = []
       sav_add = str(input(f"\nEnter your address below, {user_name} \n>").capitalize())
-      sav_social = float(input(f"Please enter your Social Security Number \n>"))
+      sav_social = str(input(f"Please enter your Social Security Number \n>"))
 
       user_intel_1.append(sav_add)
       user_intel_1.append(sav_social)
-
+      print(user_intel_1)
       clarif = input("Is this info correct?")
       if clarif == "No":
-        print("Please restart this program, you've entered the wrong section.")
+        print("Please restart this program.")
       elif clarif == "Yes":
         print("Great! You've created a Single Savings account. Thank you for using JB BANK Chatbot!")
 
@@ -66,23 +66,23 @@ def choice_1():
       address = str(input(f"\nEnter you address below, {user_name}\n>").capitalize())
       user_info.append(address)
 
-      social = float(input(f"Please enter your Social Security Number\n>"))
+      social = str(float(input(f"\nPlease enter your Social Security Number\n>")))
       user_info.append(social)
 
-      DOB = str(input(f"What is your Date Of Birth?\n>"))
+      DOB = str(input(f"\nWhat is your Date Of Birth?\n>"))
       user_info.append(DOB)
       print(user_info)
-      joint_ask = input("Is this info correct?")
+      joint_ask = input(f"\nIs this info correct?\n>")
       if joint_ask == "No":
-        print("Please restart this program")
+        print(f"\nPlease restart this program\n")
       elif joint_ask == "Yes":
-        print("Alright.")
-      clarif_2 = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
+        print(f"\nAlright.\n")
       
+      clarif_2 = input(f"\nJust to be sure, you're creating a joint account with a partner or guardian?\n>").capitalize()
       if clarif_2 == "No":
         print("Please restart this program, you've entered the wrong section.")
       elif clarif_2 == "Yes":
-        print("Great! You've created a Joint Savings account. Thank you for using JB BANK Chatbot!")
+        print(f"\nGreat! You've created a Joint Savings account. Thank you for using JB BANK Chatbot!")
       
   
   elif cs_ask == "Checking": 
@@ -93,11 +93,12 @@ def choice_1():
     c_social = str(input(f"Please enter your Social Security Number \n>"))
     checking.append(c_social)
 
-    c_dob = str(input("What is you DOB?"))
+    c_dob = str(input(f"\nWhat is you DOB?\n>"))
     checking.append(c_dob)
 
-    collect = " ".join(checking)
-    return collect
+    print(checking)
+    check_ask = input(f"\nIs this information correct? \n>")
+    
 
 
 
