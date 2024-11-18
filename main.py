@@ -53,6 +53,12 @@ def choice_1():
       user_intel_1.append(sav_add)
       user_intel_1.append(sav_social)
 
+      clarif = input("Is this info correct?")
+      if clarif == "No":
+        print("Please restart this program, you've entered the wrong section.")
+      elif clarif == "Yes":
+        print("Great! You've created a Single Savings account. Thank you for using JB BANK Chatbot!")
+
     
     if acc_select == "Joint account":
       user_info = []
@@ -65,20 +71,19 @@ def choice_1():
 
       DOB = str(input(f"What is your Date Of Birth?\n>"))
       user_info.append(DOB)
-
-      joint = " ".join(user_info)
-      print(joint)
+      print(user_info)
       joint_ask = input("Is this info correct?")
       if joint_ask == "No":
         print("Please restart this program")
       elif joint_ask == "Yes":
         print("Alright.")
-      clarif = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
+      clarif_2 = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
       
-      if clarif == "No":
+      if clarif_2 == "No":
         print("Please restart this program, you've entered the wrong section.")
-      elif clarif == "Yes":
-        print("Great! You've created a joint account with your partner. Enjoy!")
+      elif clarif_2 == "Yes":
+        print("Great! You've created a Joint Savings account. Thank you for using JB BANK Chatbot!")
+      
   
   elif cs_ask == "Checking": 
     checking = []
