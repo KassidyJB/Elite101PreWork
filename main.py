@@ -19,7 +19,7 @@ program_loop = True
   
 def selection():
   in_use = True
-  print("------------------------------------------")
+  print("________________________________________________")
   choice = int(input('Enter your choice so I can properly assist. \n>'))
   if choice == 1:
     choice_1()
@@ -29,7 +29,7 @@ def selection():
     choice_3()
   elif choice == 4:
     print(f"\nThank you for using JB BANK. See you next time, {name}!\n")
-    print("---------------------------------------")
+    print("______________________________________________")
     in_use = False
   else:
     print(f"\nInput may not be a number. Please try again!")
@@ -37,7 +37,7 @@ def selection():
       
 
 def choice_1():
-  print("------------------------------------------------")
+  print("__________________________________________________________")
   user_name = input(f"\n{name}, Please enter a username for your new account below. \n>")
   print(f"\nHello {user_name}!\n")
   cs_ask = input(f"{user_name}, would you like to create a savings or checking account? \n>").capitalize()
@@ -46,24 +46,31 @@ def choice_1():
     acc_select = input(f"\nAlright {user_name}, you selected Savings. Would you like to create a joint account or single account? \n>").capitalize()
     
     if acc_select == "Single account":
+      print("_____________________________________________")
+
       user_intel_1 = []
       sav_add = str(input(f"\nEnter your address below, {user_name} \n>").capitalize())
       sav_social = str(input(f"Please enter your Social Security Number \n>"))
+      sav_dob = str(input(f"\n What is your Date of Birth? \n>"))
 
       user_intel_1.append(sav_add)
       user_intel_1.append(sav_social)
+      user_intel_1.append(sav_dob)
       print(user_intel_1)
-      clarif = input("Is this info correct?")
-      if clarif == "No":
+
+      sav_ask = input(f"\nIs this info correct?\n>")
+
+      if sav_ask == "No":
         print("Please restart this program.")
-      elif clarif == "Yes":
+      elif sav_ask == "Yes":
         print("Great! You've created a Single Savings account. Thank you for using JB BANK Chatbot!")
 
     
     if acc_select == "Joint account":
+      print("___________________________________________")
       user_info = []
 
-      address = str(input(f"\nEnter you address below, {user_name}\n>").capitalize())
+      address = str(input(f"\nEnter your address below, {user_name}\n>").capitalize())
       user_info.append(address)
 
       social = str(float(input(f"\nPlease enter your Social Security Number\n>")))
@@ -73,27 +80,28 @@ def choice_1():
       user_info.append(DOB)
       print(user_info)
       joint_ask = input(f"\nIs this info correct?\n>")
+
       if joint_ask == "No":
         print(f"\nPlease restart this program\n")
       elif joint_ask == "Yes":
         print(f"\nAlright.\n")
-      
-      clarif_2 = input(f"\nJust to be sure, you're creating a joint account with a partner or guardian?\n>").capitalize()
-      if clarif_2 == "No":
-        print("Please restart this program, you've entered the wrong section.")
-      elif clarif_2 == "Yes":
-        print(f"\nGreat! You've created a Joint Savings account. Thank you for using JB BANK Chatbot!")
+        clarify = input(f"\nJust to be sure, you're creating a joint account with a partner or guardian?\n>").capitalize()
+        if clarify == "No":
+          print(f"\nPlease restart this program, you've entered the wrong section.\n")
+        elif clarify == "Yes":
+          print(f"\nGreat! You've created a Joint Savings account. Thank you for using JB BANK Chatbot!\n")
       
   
   elif cs_ask == "Checking": 
+    print("______________________________________________________")
     checking = []
     c_add = str(input(f"\nEnter your adress below, {user_name} \n>").capitalize())
     checking.append(c_add)
 
-    c_social = str(input(f"Please enter your Social Security Number \n>"))
+    c_social = str(input(f"\nPlease enter your Social Security Number \n>"))
     checking.append(c_social)
 
-    c_dob = str(input(f"\nWhat is you DOB?\n>"))
+    c_dob = str(input(f"\nWhat is your DOB?\n>"))
     checking.append(c_dob)
 
     print(checking)
@@ -103,27 +111,26 @@ def choice_1():
 
 
 def choice_2():
-  print("------------------------------------------------")
+  print("______________________________________________________________")
   log_name = input(f"\nEnter your username below, {name} \n>")
   log_ask = input(f"\n{log_name}, would you like to transfer, deposit, or withdraw money? \n>").capitalize()
-  
+  actions = []
   if log_ask == "Transfer":
-    actions = []
+
     tran = (str(float(input(f"\nHow much money would you like to transfer? \n>"))))
     actions.append(tran)
-    print(f"{tran} added.")
+    print(f"{tran} dollars transferred.")
   
   if log_ask == "Deposit":
     dep = (str(float(input(f"\nHow much money would you like to deposit? \n>"))))
     actions.append(dep)
-    print(f"{dep} added.")
+    print(f"{dep} dollars added to your account.")
 
   if log_ask == "Withdraw":
     wdraw = (str(float(input(f"\nHow much money would you like to withdraw? \n>"))))
     actions.append(wdraw)
-    print(f"{wdraw} added.")
-    review = "".join(actions)
-    return review
+    print(f"{wdraw} dollars withdrawed.")
+
 
 
 
