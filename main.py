@@ -47,36 +47,52 @@ def choice_1():
     
     if acc_select == "Single account":
       user_intel_1 = []
-      user_info_1 = str(input(f"\nEnter your address below, {user_name} \n>").capitalize())
-      user_info_2 = float(input(f"Please enter your Social Security Number \n>"))
-      user_intel_1.append(user_info_1)
-      user_intel_1.append(user_info_2)
+      sav_add = str(input(f"\nEnter your address below, {user_name} \n>").capitalize())
+      sav_social = float(input(f"Please enter your Social Security Number \n>"))
+
+      user_intel_1.append(sav_add)
+      user_intel_1.append(sav_social)
 
     
     if acc_select == "Joint account":
-      user_joint = []
-      user_info_3 = str(input(f"\nEnter you address below, {user_name}\n>").capitalize())
-      user_info_4 = float(input(f"Please enter your Social Security Number\n>"))
-      user_info_41 = str(int(input(f"What is your Date Of Birth?\n>")))
-      user_info_42 = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
-      if user_info_42 == "No":
+      user_info = []
+
+      address = str(input(f"\nEnter you address below, {user_name}\n>").capitalize())
+      user_info.append(address)
+
+      social = float(input(f"Please enter your Social Security Number\n>"))
+      user_info.append(social)
+
+      DOB = str(input(f"What is your Date Of Birth?\n>"))
+      user_info.append(DOB)
+
+      joint = " ".join(user_info)
+      print(joint)
+      joint_ask = input("Is this info correct?")
+      if joint_ask == "No":
+        print("Please restart this program")
+      elif joint_ask == "Yes":
+        print("Alright.")
+      clarif = input(f"Just to be sure, you're creating a joint account with a partner or guardian?").capitalize()
+      
+      if clarif == "No":
         print("Please restart this program, you've entered the wrong section.")
-      elif user_info_42 == "Yes":
+      elif clarif == "Yes":
         print("Great! You've created a joint account with your partner. Enjoy!")
-      user_joint.append(user_info_3)
-      user_joint.append(user_info_4)
-      user_joint.append(user_info_41)
-      user_joint.append(user_info_42)
-      join_user_info = "".join(user_joint)
-      return join_user_info
+  
   elif cs_ask == "Checking": 
-    user_intel_2 = []
-    user_info_5 = str(input(f"\nEnter your adress below, {user_name} \n>").capitalize())
-    user_info_6 = str(input(f"Please enter your Social Security Number \n>"))
-    user_intel_2.append(user_info_5)
-    user_intel_2.append(user_info_6)
+    checking = []
+    c_add = str(input(f"\nEnter your adress below, {user_name} \n>").capitalize())
+    checking.append(c_add)
 
+    c_social = str(input(f"Please enter your Social Security Number \n>"))
+    checking.append(c_social)
 
+    c_dob = str(input("What is you DOB?"))
+    checking.append(c_dob)
+
+    collect = " ".join(checking)
+    return collect
 
 
 
@@ -89,16 +105,20 @@ def choice_2():
     actions = []
     tran = (str(float(input(f"\nHow much money would you like to transfer? \n>"))))
     actions.append(tran)
+    print(f"{tran} added.")
   
   if log_ask == "Deposit":
     dep = (str(float(input(f"\nHow much money would you like to deposit? \n>"))))
     actions.append(dep)
-  
+    print(f"{dep} added.")
+
   if log_ask == "Withdraw":
     wdraw = (str(float(input(f"\nHow much money would you like to withdraw? \n>"))))
     actions.append(wdraw)
+    print(f"{wdraw} added.")
     review = "".join(actions)
     return review
+
 
 
 
